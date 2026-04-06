@@ -7,7 +7,7 @@ import Hobby from './components/Hobby';
 import Contact from './components/Contact';
 import SocialLink from './components/SocialLink';
 
-// IMPORT FOTO KAMU DI SINI
+
 import FotoArin from '../../assets/profile.jpg'; 
 
 const BiodataDiri = () => {

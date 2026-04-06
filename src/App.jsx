@@ -1,12 +1,12 @@
-import React from 'react';
-import BiodataDiri from './tugas/Pertemuan2/BiodataDiri';
+import React from 'react'
+import CatCafe from './tugas/Pertemuan3/CatCafe' 
 
 function App() {
   return (
-    <div className="App">
-      <BiodataDiri />
-    </div>
-  );
+    <>
+      <CatCafe />
+    </>
+  )
 }
 
-export default App;
+export default App
