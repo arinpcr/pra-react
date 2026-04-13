@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+.cat-body-wrapper {
+  margin: 0;
+  padding: 60px 0;
+  font-family: 'Nunito', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memastikan header dan filter di tengah */
+  background-color: #fdfaf6;
+  background-image: conic-gradient(
+    #d4e6eb 90deg,
+    transparent 90deg 180deg,
+    #d4e6eb 180deg 270deg,
+    transparent 270deg
+  );
+  background-size: 120px 160px;
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background-color: #ffb6c1;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 25px 15px rgba(255, 182, 193, 0.8);
+  z-index: 9999;
+}
+
+/* GRID CONTAINER: Kunci agar simetris tengah */
+.grid-container {
+  display: grid;
+  /* Menggunakan auto agar kolom tidak rakus tempat ke kanan */
+  grid-template-columns: repeat(4, auto); 
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding: 20px;
+  justify-content: center; /* Ini kunci utama kartu di tengah */
+  width: 100%;
+}
+
+/* Responsive Breakpoints biar tetap rapi */
+@media (max-width: 1150px) { .grid-container { grid-template-columns: repeat(3, auto); } }
+@media (max-width: 880px) { .grid-container { grid-template-columns: repeat(2, auto); } }
+@media (max-width: 600px) { .grid-container { grid-template-columns: repeat(1, auto); } }
+
+.photocard-container {
+  background-color: #fff5f8;
+  border: 15px solid #ffb6c1;
+  border-radius: 35px;
+  padding: 20px; 
+  width: 250px; /* Lebar kartu dikunci */
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.photocard-container:hover {
+  transform: translateY(-10px);
+}
+
+.profile-pic-frame {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  border: 6px solid white;
+  box-shadow: 0 6px 15px rgba(255, 182, 193, 0.3);
+}
+
+.cat-name { color: #ff6b81; font-size: 1.6rem; margin: 5px 0 2px; font-weight: 800; font-style: italic; }
+.cat-info { color: #8d6e63; font-weight: 700; font-size: 0.85rem; margin-bottom: 5px; }
+.cat-tag { background-color: #a4b0be; color: white; padding: 4px 15px; border-radius: 15px; font-size: 0.75rem; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+.dashed-line { border: 0; border-top: 3px dashed #ffb6c1; width: 80%; margin: 10px auto; }
+
+.hobi-box { background: white; border: 3px dashed #ffb6c1; border-radius: 18px; padding: 10px; margin-bottom: 15px; }
+.hobi-box h3 { color: #ff6b81; font-size: 0.9rem; margin-bottom: 5px; }
+.hobi-list { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; list-style: none; padding: 0; }
+.hobi-item { background: #ffe4e1; padding: 5px 12px; border-radius: 10px; color: #ff6b81; font-weight: bold; font-size: 0.75rem; }
+
+.footer-inside { background-color: #ffb6c1; padding: 15px; border-radius: 18px; color: white; }
+.admin-btn { background: #1B1A17; color: #ffb6c1; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 900; font-size: 10px; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; margin-top: 30px; }

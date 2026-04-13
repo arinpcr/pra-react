@@ -1,12 +1,10 @@
-import React from 'react'
-import CatCafe from './tugas/Pertemuan3/CatCafe' 
+import React from 'react';
+import CatManagement from './tugas/pertemuan4/CatManagement';
 
 function App() {
   return (
-    <>
-      <CatCafe />
-    </>
-  )
+    <CatManagement />
+  );
 }
 
-export default App
+export default App;
