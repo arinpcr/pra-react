@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+    --font-barlow: "Barlow", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+
+    /* Warna Tema Elegent Hotel */
+    --color-latar: #fdf8f5; /* Krem lembut */
+    --color-oren: #f97316; /* Oranye utama */
+    --color-oren-muda: #ffedd5;
+    --color-teks: #374151; 
+    --color-garis: #e5e7eb; 
+}
+
+body {
+    @apply font-poppins bg-latar text-teks;
+    margin: 0;
+}
