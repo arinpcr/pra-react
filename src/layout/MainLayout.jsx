@@ -13,7 +13,7 @@ export default function MainLayout() {
     //    dan mengambil sisa ruang flexbox yang tersedia setelah dikurangi ukuran lebar Sidebar.
     // 3. <Outlet />: Tanpa komponen ini, halaman Dashboard atau Bookings tidak akan pernah muncul di layar.
     return (
-        <div className="min-h-screen bg-[#fdf8f5] font-poppins text-gray-800">
+        <div className="min-h-screen bg-[#FFF4EA] font-poppins text-gray-800">
             <div className="flex min-h-screen flex-col lg:flex-row">
                 <Sidebar />
                 <div id="main-content" className="flex-1 p-4 md:p-6 xl:p-8">

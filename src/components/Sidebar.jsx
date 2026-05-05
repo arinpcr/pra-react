@@ -37,11 +37,11 @@ export default function Sidebar() {
     <div id="sidebar" className="flex flex-col w-64 min-h-[95vh] bg-white m-4 rounded-[32px] shadow-sm p-4">
       
       <div id="sidebar-logo" className="flex items-center gap-3 mb-10 px-4 pt-6">
-        <div className="w-10 h-10 rounded-full border-[3px] border-orange-500 flex items-center justify-center relative">
-            <div className="w-5 h-1.5 bg-orange-500 rounded-full absolute -ml-1"></div>
-            <div className="w-3 h-1.5 bg-orange-500 rounded-full absolute mt-4 -ml-3"></div>
+        <div className="w-10 h-10 rounded-full border-[3px] border-[#FF8E29] flex items-center justify-center relative">
+            <div className="w-5 h-1.5 bg-[#FF8E29] rounded-full absolute -ml-1"></div>
+            <div className="w-3 h-1.5 bg-[#FF8E29] rounded-full absolute mt-4 -ml-3"></div>
         </div>
-        <h1 className="text-2xl font-bold text-gray-800 tracking-tight">Elegent</h1>
+        <h1 className="text-2xl font-bold text-gray-800 tracking-tight">Capella</h1>
       </div>
 
       <div id="sidebar-menu" className="flex-1 overflow-y-auto px-2">
@@ -60,7 +60,7 @@ export default function Sidebar() {
       </div>
 
       <div id="sidebar-footer" className="mt-auto px-2 pb-4">
-          <button onClick={handleAuthAction} className="flex items-center gap-3 text-orange-500 font-bold hover:text-orange-700 p-4 w-full rounded-xl hover:bg-orange-50 transition-all">
+          <button onClick={handleAuthAction} className="flex items-center gap-3 text-[#FF8E29] font-bold hover:text-orange-700 p-4 w-full rounded-xl hover:bg-orange-50 transition-all">
               {isLoggedIn ? (
                   <><FaSignOutAlt className="text-xl" /><span>Logout</span></>
               ) : (

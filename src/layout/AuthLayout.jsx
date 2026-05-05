@@ -7,7 +7,7 @@ export default function AuthLayout() {
     // Kombinasi 'min-h-screen flex items-center justify-center' adalah cara standar dan paling efisien 
     // untuk menengahkan sebuah kotak (form) sempurna di tengah layar tanpa perlu repot mengatur margin otomatis.
     return (
-        <div className="min-h-screen bg-[#fdf8f5] flex items-center justify-center p-4 font-poppins">
+        <div className="min-h-screen bg-[#FFF4EA] flex items-center justify-center p-4 font-poppins">
             <Outlet />
         </div>
     );

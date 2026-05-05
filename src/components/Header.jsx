@@ -36,9 +36,9 @@ export default function Header() {
             {/* KONSEP TERNARY OPERATOR PADA CONDITIONAL RENDERING: */}
             {/* Sintaks: (Kondisi) ? (Blok True) : (Blok False) */}
             {isLoggedIn ? (
-                <div id="profile-container" className="flex items-center gap-3 bg-white p-1.5 pr-4 rounded-full shadow-sm cursor-pointer border border-gray-50">
+                <div id="profile-container" className="flex items-center gap-3 bg-[#FFF4EA] p-1.5 pr-4 cursor-pointer border border-[#FFF4EA]">
                     <img src="/img/profile.jpg" alt="Aiden Max" className="w-9 h-9 rounded-full object-cover" onError={(e) => { e.target.src = "https://avatar.iran.liara.run/public/12" }} />
-                    <span className="text-sm font-semibold text-gray-700">Aiden Max</span>
+                    <span className="text-sm font-semibold text-gray-700">Arini Zahira Putri</span>
                     <FaChevronDown className="text-gray-400 text-xs ml-1" />
                 </div>
             ) : (
