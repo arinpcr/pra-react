@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 @theme {
+    /* Mendaftarkan font kustom ke dalam tailwind */
     --font-barlow: "Barlow", sans-serif;
     --font-poppins: "Poppins", sans-serif;
 
-    /* Warna Tema Elegent Hotel */
-    --color-latar: #fdf8f5; /* Krem lembut */
-    --color-oren: #f97316; /* Oranye utama */
+    /* Mendaftarkan Warna Tema khusus Elegent Hotel */
+    --color-latar: #fdf8f5; 
+    --color-oren: #f97316; 
     --color-oren-muda: #ffedd5;
     --color-teks: #374151; 
     --color-garis: #e5e7eb; 
 }
 
 body {
+    /* @apply akan menerapkan seluruh class tailwind ini ke body website utama secara otomatis */
     @apply font-poppins bg-latar text-teks;
     margin: 0;
 }

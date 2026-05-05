@@ -3,9 +3,15 @@ import { FaSearch, FaChevronDown, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Header() {
+    // Memori buat nginget "Layar search lagi dibuka ngga nih?"
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    // Cek stempel login di memori browser
     const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
+    // PENJELASAN KODE DI BAWAH:
+    // - Tombol search "onClick={() => setIsSearchOpen(true)}" berguna mengubah memori pembuka layar menjadi true.
+    // - Modal Search "{isSearchOpen && ...}" akan tampil JIKA memori tadi bernilai true.
+    // - Profil Bersyarat: "{isLoggedIn ? (Tampil Foto Profil) : (Tampil Tombol Login)}"
     return (
         <div id="header-container" className="flex justify-between items-center bg-transparent mb-6 mt-2">
             <div className="flex-1 hidden md:block"></div>
@@ -25,7 +31,6 @@ export default function Header() {
                 </div>
             )}
 
-            {/* KONDISI PROFIL / TOMBOL LOGIN */}
             {isLoggedIn ? (
                 <div id="profile-container" className="flex items-center gap-3 bg-white p-1.5 pr-4 rounded-full shadow-sm cursor-pointer border border-gray-50">
                     <img src="/img/profile.jpg" alt="Aiden Max" className="w-9 h-9 rounded-full object-cover" onError={(e) => { e.target.src = "https://avatar.iran.liara.run/public/12" }} />

@@ -14,17 +14,19 @@ export default function Register() {
     };
 
     const handleSubmit = (e) => {
+        // e.preventDefault wajib dipanggil biar saat disubmit layarnya nggak kedip/refresh
         e.preventDefault();
         setLoading(true);
 
-        // Simulasi loading register
+        // Simulasi proses registrasi selama 1,5 detik
         setTimeout(() => {
-            // SIMPAN DATA AKUN BARU KE LOCALSTORAGE BROWSER
+            // SIMPAN DATA AKUN BARU KE LOCALSTORAGE BROWSER BIAR BISA DILOGIN
             localStorage.setItem("registeredEmail", dataForm.email);
             localStorage.setItem("registeredPass", dataForm.password);
             localStorage.setItem("registeredName", dataForm.name);
 
             setLoading(false);
+            // Lempar user ke halaman login setelah berhasil buat akun
             navigate("/login");
         }, 1500);
     };

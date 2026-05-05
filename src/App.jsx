@@ -1,7 +1,11 @@
+// Mengimpor React dan Suspense (buat fitur nungguin halaman didownload)
 import React, { Suspense } from "react";
+// Mengimpor Routes (peta besar) dan Route (jalan) biar bisa pindah halaman tanpa reload
 import { Route, Routes } from "react-router-dom";
+// Mengimpor komponen Loading yang muter-muter
 import Loading from "./components/Loading";
 
+// REACT LAZY: Teknik biar web enteng. Halaman baru di-download pas menunya diklik aja.
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Bookings = React.lazy(() => import("./pages/Bookings"));
 const Guests = React.lazy(() => import("./pages/Guests"));
@@ -15,6 +19,11 @@ const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 const Success = React.lazy(() => import("./pages/auth/Success"));
 
 function App() {
+  // PENJELASAN KODE DI BAWAH:
+  // - SUSPENSE: Selama nunggu halaman di-download, tampilin efek <Loading />.
+  // - MAIN LAYOUT: Bungkus halaman yang butuh Sidebar & Header.
+  // - AUTH LAYOUT: Bungkus halaman form polos di tengah layar.
+  // - TANDA (*): Kalau user ngetik URL ngawur, arahin ke halaman NotFound.
   return (
     <Suspense fallback={<Loading />}>
       <Routes>

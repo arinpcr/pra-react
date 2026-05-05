@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { FaRegCheckCircle } from "react-icons/fa";
 
 export default function Success() {
+    // PENJELASAN KODE DI BAWAH:
+    // - Link: Komponen khusus dari React Router agar pas dipencet pindah ke Dashboard, halamannya tidak perlu reloading browser secara total.
     return (
         <div className="flex w-full max-w-5xl bg-white rounded-3xl shadow-xl overflow-hidden min-h-[550px]">
             <div className="w-full md:w-1/2 p-10 md:p-14 flex flex-col relative">
@@ -20,7 +22,6 @@ export default function Success() {
                         Welcome back to Elegent. Your secure session has been established.
                     </p>
                     
-                    {/* MENUJU DASHBOARD (/) */}
                     <Link to="/" className="w-full max-w-[280px]">
                         <button className="w-full bg-[#f98829] hover:bg-orange-500 text-white font-semibold py-4 rounded-full transition-all active:scale-95 shadow-md">
                             Go to Dashboard

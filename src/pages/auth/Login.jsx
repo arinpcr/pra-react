@@ -1,4 +1,6 @@
+// useState buat nyimpen memori sementara
 import { useState } from "react";
+// useNavigate buat pindah halaman lewat kode
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import { FaEnvelope, FaKey } from "react-icons/fa";
@@ -6,16 +8,20 @@ import { ImSpinner2 } from "react-icons/im";
 
 export default function Login() {
     const navigate = useNavigate();
+    // Memori untuk status loading, error, dan kotak isian email/password
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [dataForm, setDataForm] = useState({ email: "", password: "" });
 
+    // Fungsi nyatet otomatis pas user ngetik di kotak input
     const handleChange = (evt) => {
         const { name, value } = evt.target;
         setDataForm({ ...dataForm, [name]: value });
     };
 
+    // Fungsi saat tombol "Log in" diklik
     const handleSubmit = async (e) => {
+        // Mencegah browser nge-refresh halaman biar data nggak hilang
         e.preventDefault();
         setLoading(true);
         setError("");
@@ -25,16 +31,16 @@ export default function Login() {
         const savedPass = localStorage.getItem("registeredPass");
 
         if (savedEmail && dataForm.email === savedEmail && dataForm.password === savedPass) {
-            // Jika datanya cocok dengan akun yang baru diregister, login sukses!
+            // Jika datanya cocok, login sukses
             setTimeout(() => {
                 localStorage.setItem("isLoggedIn", "true");
                 setLoading(false);
                 navigate("/success");
-            }, 1000); // Dikasih jeda dikit biar berasa loading beneran
-            return; // Hentikan fungsi di sini, jangan panggil API
+            }, 1000); 
+            return; 
         }
 
-        // 2. JIKA BUKAN AKUN BARU, COBA CEK KE API DUMMYJSON (Contoh: emilys)
+        // 2. JIKA BUKAN AKUN BARU, COBA CEK KE API DUMMYJSON
         axios.post("https://dummyjson.com/user/login", {
             username: dataForm.email, 
             password: dataForm.password,
@@ -55,6 +61,10 @@ export default function Login() {
         });
     };
 
+    // PENJELASAN KODE DI BAWAH:
+    // - value={dataForm.email}: Mengikat kotak input dengan memori React.
+    // - error && div: Memunculkan kotak merah HANYA jika ada tulisan error.
+    // - disabled={loading}: Mencegah tombol diklik dua kali saat proses loading berjalan.
     return (
         <div className="flex w-full max-w-5xl bg-white rounded-3xl shadow-xl overflow-hidden min-h-[550px]">
             <div className="w-full md:w-1/2 p-10 md:p-14 flex flex-col relative">
