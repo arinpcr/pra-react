@@ -1,51 +1,63 @@
-// useState buat nyimpen memori sementara
 import { useState } from "react";
-// useNavigate buat pindah halaman lewat kode
+// useNavigate: Hook (fungsi) dari react-router untuk melakukan navigasi secara terprogram (misal: pindah setelah login sukses).
 import { useNavigate, Link } from "react-router-dom";
+// axios: Library eksternal untuk melakukan HTTP Request (mengambil atau mengirim data ke API/Server).
 import axios from "axios";
 import { FaEnvelope, FaKey } from "react-icons/fa";
 import { ImSpinner2 } from "react-icons/im";
 
 export default function Login() {
     const navigate = useNavigate();
-    // Memori untuk status loading, error, dan kotak isian email/password
+    
+    // PENJELASAN STATE MANAGEMENT:
+    // useState digunakan untuk menyimpan state (data komponen) yang bisa berubah sewaktu-waktu.
+    // Ketika nilai state berubah menggunakan fungsi setter (misal: setLoading), React akan me-render ulang komponen (Re-render) agar UI berubah.
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
+    
+    // State berbentuk Object (dataForm) sangat efisien untuk menangani Form dengan banyak inputan.
     const [dataForm, setDataForm] = useState({ email: "", password: "" });
 
-    // Fungsi nyatet otomatis pas user ngetik di kotak input
+    // PENJELASAN FUNGSI HANDLE CHANGE (TWO-WAY BINDING):
+    // Fungsi ini dipanggil setiap kali ada ketikan (onChange) di input.
+    // ...dataForm (Spread Operator): Menyalin semua isi object dataForm yang lama agar tidak terhapus.
+    // [name]: value (Computed Property Name): Mengupdate secara dinamis HANYA field yang nama atributnya (name="email/password") sesuai dengan kotak yang sedang diketik.
     const handleChange = (evt) => {
         const { name, value } = evt.target;
         setDataForm({ ...dataForm, [name]: value });
     };
 
-    // Fungsi saat tombol "Log in" diklik
+    // PENJELASAN FUNGSI HANDLE SUBMIT:
+    // e.preventDefault() MENCEGAH prilaku bawaan browser yang selalu melakukan "Full Page Reload" atau pindah URL bawaan saat form disubmit.
+    // Jika tidak ada ini, state React akan reset/hilang semua.
     const handleSubmit = async (e) => {
-        // Mencegah browser nge-refresh halaman biar data nggak hilang
         e.preventDefault();
         setLoading(true);
         setError("");
 
-        // 1. CEK DULU KE LOCAL STORAGE (Hasil dari halaman Register)
+        // LOGIKA A: CEK LOCALSTORAGE BROWSER (Penyimpanan lokal di komputer user)
         const savedEmail = localStorage.getItem("registeredEmail");
         const savedPass = localStorage.getItem("registeredPass");
 
         if (savedEmail && dataForm.email === savedEmail && dataForm.password === savedPass) {
-            // Jika datanya cocok, login sukses
             setTimeout(() => {
+                // Menyimpan token/status sesi (isLoggedIn) ke dalam browser.
                 localStorage.setItem("isLoggedIn", "true");
                 setLoading(false);
                 navigate("/success");
             }, 1000); 
+            // Return di sini penting untuk mengeksekusi penghentian fungsi agar proses tidak lanjut ke Axios di bawahnya.
             return; 
         }
 
-        // 2. JIKA BUKAN AKUN BARU, COBA CEK KE API DUMMYJSON
+        // LOGIKA B: JIKA TIDAK ADA DI LOCALSTORAGE, TEMBAK KE SERVER API (axios)
+        // Endpoint dummyjson menangkap request berjenis POST.
         axios.post("https://dummyjson.com/user/login", {
             username: dataForm.email, 
             password: dataForm.password,
         })
         .then((response) => {
+            // Block .then() berjalan JIKA respon dari server berhasil (status 200 OK).
             if (response.status !== 200) {
                 setError(response.data.message);
                 return;
@@ -54,17 +66,20 @@ export default function Login() {
             navigate("/success"); 
         })
         .catch((err) => {
+            // Block .catch() berjalan JIKA server menolak request (error 400/404/500), atau network mati.
+            // err.response?.data?.message (Optional Chaining) membaca pesan error dari server API jika ada.
             setError(err.response?.data?.message || "Invalid credentials");
         })
         .finally(() => {
+            // Block .finally() SELALU berjalan terlepas berhasil atau gagal, digunakan untuk mematikan status loading di tombol.
             setLoading(false);
         });
     };
 
-    // PENJELASAN KODE DI BAWAH:
-    // - value={dataForm.email}: Mengikat kotak input dengan memori React.
-    // - error && div: Memunculkan kotak merah HANYA jika ada tulisan error.
-    // - disabled={loading}: Mencegah tombol diklik dua kali saat proses loading berjalan.
+    // PENJELASAN KONSEP RENDER FORM:
+    // - value={dataForm.email} membuat komponen menjadi 'Controlled Component', di mana React memegang kontrol penuh atas apa yang ditampilkan di input.
+    // - Conditional Rendering {error && <div>} berarti: Tampilkan elemen Div HANYA bernilai Truthy (ada isinya).
+    // - Atribut 'disabled={loading}' membuat button HTML tidak bisa diklik dan mencegah user melakukan klik ganda saat proses API masih berjalan.
     return (
         <div className="flex w-full max-w-5xl bg-white rounded-3xl shadow-xl overflow-hidden min-h-[550px]">
             <div className="w-full md:w-1/2 p-10 md:p-14 flex flex-col relative">

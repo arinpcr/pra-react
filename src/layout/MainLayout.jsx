@@ -1,13 +1,17 @@
-// Mengimpor Outlet ibarat "Layar Kosong" tempat halamannya muncul
+// Outlet adalah komponen placeholder (tempat kosong) dari react-router-dom.
+// Ini bertindak sebagai titik masuk di mana child routes (komponen halaman anak) akan dirender.
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 
 export default function MainLayout() {
-    // PENJELASAN KODE DI BAWAH:
-    // - lg:flex-row: Kalau di HP numpuk atas-bawah, kalau di Laptop nyamping kiri-kanan.
-    // - flex-1: Menghabiskan semua sisa ruang di sebelah kanan Sidebar.
-    // - Outlet: Di titik inilah halaman Dashboard dll akan disuntikkan/ditampilkan.
+    // PENJELASAN STRUKTUR LAYOUTING FLEXBOX:
+    // 1. Konsep "lg:flex-row": Ini adalah pendekatan Mobile-First. 
+    //    Secara default (di HP), div ini memakai 'flex-col' (Sidebar di atas, Konten di bawah).
+    //    Saat layar mencapai ukuran laptop ('lg'), layout berubah menjadi 'flex-row' (Sidebar di kiri, Konten di kanan).
+    // 2. Konsep "flex-1": Diterapkan pada div konten. Ini memberitahu browser agar elemen ini meregang (grow) 
+    //    dan mengambil sisa ruang flexbox yang tersedia setelah dikurangi ukuran lebar Sidebar.
+    // 3. <Outlet />: Tanpa komponen ini, halaman Dashboard atau Bookings tidak akan pernah muncul di layar.
     return (
         <div className="min-h-screen bg-[#fdf8f5] font-poppins text-gray-800">
             <div className="flex min-h-screen flex-col lg:flex-row">

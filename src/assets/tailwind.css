@@ -1,11 +1,17 @@
+/* Direktif khusus Tailwind versi 4 untuk memuat seluruh library CSS Tailwind */
 @import "tailwindcss";
 
+/* 
+   KONSEP TEMA TAILWIND (@theme):
+   Memungkinkan kita membuat CSS Variable (Custom Properties) yang dapat langsung dipanggil 
+   sebagai kelas utilitas (Utility Class) di dalam tag JSX.
+   Contoh: --color-latar akan menciptakan utilitas otomatis seperti "bg-latar", "text-latar", atau "border-latar".
+*/
 @theme {
-    /* Mendaftarkan font kustom ke dalam tailwind */
     --font-barlow: "Barlow", sans-serif;
     --font-poppins: "Poppins", sans-serif;
 
-    /* Mendaftarkan Warna Tema khusus Elegent Hotel */
+    /* Warna Tema Elegent Hotel */
     --color-latar: #fdf8f5; 
     --color-oren: #f97316; 
     --color-oren-muda: #ffedd5;
@@ -13,8 +19,12 @@
     --color-garis: #e5e7eb; 
 }
 
+/* 
+   KONSEP @apply:
+   Adalah fitur direktif di mana kita bisa menyuntikkan kelas Tailwind langsung ke tag HTML dasar (seperti body, h1, p).
+   Di sini, seluruh teks di web akan otomatis memakai font Poppins tanpa perlu kita ketik di setiap komponen.
+*/
 body {
-    /* @apply akan menerapkan seluruh class tailwind ini ke body website utama secara otomatis */
     @apply font-poppins bg-latar text-teks;
     margin: 0;
 }

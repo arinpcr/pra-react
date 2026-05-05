@@ -1,9 +1,11 @@
+// Konsep Link:
+// Di React, KITA TIDAK BOLEH menggunakan tag HTML <a> untuk pindah antar halaman (routing internal).
+// Tag <a> akan memaksa browser mengunduh ulang (reload) seluruh file HTML, CSS, dan JS dari awal yang merusak sifat SPA (Single Page Application).
+// Komponen <Link to=""> akan mengganti URL di atas, dan me-render ulang Outlet HANYA pada komponen yang berubah saja (lebih cepat).
 import { Link } from "react-router-dom";
 import { FaRegCheckCircle } from "react-icons/fa";
 
 export default function Success() {
-    // PENJELASAN KODE DI BAWAH:
-    // - Link: Komponen khusus dari React Router agar pas dipencet pindah ke Dashboard, halamannya tidak perlu reloading browser secara total.
     return (
         <div className="flex w-full max-w-5xl bg-white rounded-3xl shadow-xl overflow-hidden min-h-[550px]">
             <div className="w-full md:w-1/2 p-10 md:p-14 flex flex-col relative">

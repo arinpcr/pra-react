@@ -1,30 +1,38 @@
 import { FaHome, FaBed, FaUserFriends, FaSignOutAlt, FaSignInAlt, FaBan } from "react-icons/fa";
-// NavLink adalah link khusus menu. Dia bisa tahu kapan menu itu lagi diklik/aktif.
+// NavLink mirip dengan Link, namun NavLink memiliki prop 'isActive'.
+// Prop ini tahu apakah rute/URL yang tertulis pada atribut 'to' sama dengan URL yang sedang dikunjungi user.
 import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Sidebar() {
   const navigate = useNavigate();
-  // Mengecek ke memori browser: Apakah user ini udah punya stempel login?
+  // Validasi Otorisasi (Auth Check):
+  // Membaca memori dari localStorage dengan key "isLoggedIn". Jika string yang didapat adalah "true",
+  // maka variabel boolean isLoggedIn akan diset ke true. 
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
+  // KONSEP EVENT HANDLER:
   const handleAuthAction = () => {
       if (isLoggedIn) {
-          // JIKA LOGOUT: Hapus stempel sesi dan paksa browser refresh total (Hard Refresh)
+          // LOGOUT LOGIC:
+          // 1. Menghapus sesi kredensial dari browser dengan removeItem.
           localStorage.removeItem("isLoggedIn");
+          // 2. window.location.href BUKAN React Router. Ini native dari Javascript.
+          // Digunakan di sini agar aplikasi "memaksa" browser me-refresh dan menghapus sisa state global jika ada.
           window.location.href = "/"; 
       } else {
-          // JIKA BELUM LOGIN: Arahkan mulus ke halaman login
+          // LOGIN LOGIC:
           navigate("/login"); 
       }
   };
 
-  // Fungsi cerdas pewarnaan menu: JIKA menu sedang aktif (isActive), warnanya otomatis menyesuaikan
+  // KONSEP DYNAMIC STYLING (Kelas Dinamis):
+  // Fungsi ini menerima parameter destructured { isActive }.
+  // Menggunakan template literal (backtick ` `), kita menggabungkan kelas dasar yang selalu ada,
+  // dengan Ternary Operator yang akan menyuntikkan kelas warna Oranye JIKA parameter isActive bernilai true.
   const menuClass = ({ isActive }) =>
     `flex cursor-pointer items-center rounded-xl p-4 space-x-3 transition-all font-medium
     ${isActive ? "text-white bg-orange-500 shadow-md shadow-orange-200" : "text-gray-500 hover:text-orange-500 hover:bg-orange-50"}`;
 
-  // PENJELASAN KODE DI BAWAH:
-  // - Pada bagian FOOTER, ada logika: {isLoggedIn ? (Tampil Logout) : (Tampil Login)}
   return (
     <div id="sidebar" className="flex flex-col w-64 min-h-[95vh] bg-white m-4 rounded-[32px] shadow-sm p-4">
       

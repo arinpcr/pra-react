@@ -14,23 +14,28 @@ export default function Register() {
     };
 
     const handleSubmit = (e) => {
-        // e.preventDefault wajib dipanggil biar saat disubmit layarnya nggak kedip/refresh
         e.preventDefault();
         setLoading(true);
 
-        // Simulasi proses registrasi selama 1,5 detik
+        // setTimeout digunakan di sini untuk membuat simulasi asinkron (Mencegah instant execution).
+        // Seolah-olah aplikasi sedang me-request pendaftaran ke server, padahal hanya ditunda 1,5 detik.
         setTimeout(() => {
-            // SIMPAN DATA AKUN BARU KE LOCALSTORAGE BROWSER BIAR BISA DILOGIN
+            // KONSEP LOCAL STORAGE:
+            // Menyimpan objek/string ke dalam database mini yang tertanam di browser pengguna.
+            // Data ini tidak akan hilang walaupun tab/browser di-close (persisten).
             localStorage.setItem("registeredEmail", dataForm.email);
             localStorage.setItem("registeredPass", dataForm.password);
             localStorage.setItem("registeredName", dataForm.name);
 
             setLoading(false);
-            // Lempar user ke halaman login setelah berhasil buat akun
+            // Setelah data tersimpan di LocalStorage, program secara paksa mengarahkan (redirect) user ke URL /login
             navigate("/login");
         }, 1500);
     };
 
+    // PENJELASAN ELEMEN:
+    // Bagian desain kanan dengan kelas 'hidden md:block w-1/2' memastikan bahwa kotak oranye bergambar background ini 
+    // akan disembunyikan sepenuhnya di layar kecil (HP), dan baru muncul di layar medium ke atas.
     return (
         <div className="flex w-full max-w-5xl bg-white rounded-3xl shadow-xl overflow-hidden min-h-[550px]">
             <div className="w-full md:w-1/2 p-10 md:p-14 flex flex-col relative">

@@ -1,11 +1,14 @@
-// Mengimpor React dan Suspense (buat fitur nungguin halaman didownload)
+// Mengimpor React dan komponen Suspense. Suspense adalah fitur bawaan React 
+// yang berfungsi untuk menangani status "menunggu" (asynchronous) saat komponen sedang dimuat.
 import React, { Suspense } from "react";
-// Mengimpor Routes (peta besar) dan Route (jalan) biar bisa pindah halaman tanpa reload
+// Route dan Routes adalah inti dari React Router Dom. 
+// Routes = Bungkus utama untuk semua jalur. Route = Definisi masing-masing jalur (URL).
 import { Route, Routes } from "react-router-dom";
-// Mengimpor komponen Loading yang muter-muter
 import Loading from "./components/Loading";
 
-// REACT LAZY: Teknik biar web enteng. Halaman baru di-download pas menunya diklik aja.
+// KONSEP REACT LAZY (CODE SPLITTING):
+// Normalnya, React akan membundel semua file menjadi satu file besar (bundle.js), yang membuat web lambat saat pertama kali dibuka.
+// React.lazy memecah file tersebut. File komponen hanya akan di-download oleh browser saat rutenya benar-benar dikunjungi oleh user.
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Bookings = React.lazy(() => import("./pages/Bookings"));
 const Guests = React.lazy(() => import("./pages/Guests"));
@@ -19,11 +22,12 @@ const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 const Success = React.lazy(() => import("./pages/auth/Success"));
 
 function App() {
-  // PENJELASAN KODE DI BAWAH:
-  // - SUSPENSE: Selama nunggu halaman di-download, tampilin efek <Loading />.
-  // - MAIN LAYOUT: Bungkus halaman yang butuh Sidebar & Header.
-  // - AUTH LAYOUT: Bungkus halaman form polos di tengah layar.
-  // - TANDA (*): Kalau user ngetik URL ngawur, arahin ke halaman NotFound.
+  // PENJELASAN KONSEP RENDER:
+  // 1. <Suspense fallback={<Loading />}>: Karena pakai React.lazy, butuh waktu beberapa milidetik untuk download file. 
+  //    Prop 'fallback' memberitahu React: "Tampilkan komponen Loading INI selama proses download berlangsung".
+  // 2. NESTED ROUTING (Route Bersarang): <Route element={<MainLayout />}> membungkus rute anak-anaknya.
+  //    Artinya, MainLayout akan menjadi semacam "Master Page" yang membungkus konten Dashboard, Bookings, dll.
+  // 3. WILDCARD ROUTE (path="*"): Menangkap semua URL yang tidak terdaftar di atasnya (Penanganan 404 Page Not Found).
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
