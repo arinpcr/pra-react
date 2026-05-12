@@ -34,7 +34,10 @@ export default function Sidebar() {
     ${isActive ? "text-white bg-orange-500 shadow-md shadow-orange-200" : "text-gray-500 hover:text-orange-500 hover:bg-orange-50"}`;
 
   return (
-    <div id="sidebar" className="flex flex-col w-64 min-h-[95vh] bg-white m-4 rounded-[32px] shadow-sm p-4">
+    // KUNCI RAHASIA: 
+    // 1. 'h-[calc(100vh-32px)]' -> Memaksa tinggi Sidebar persis sejajar layar dikurangi margin.
+    // 2. 'sticky top-4' -> Membuat Sidebar nempel dan diam di tempat saat halaman di-scroll ke bawah.
+    <div id="sidebar" className="flex flex-col w-64 h-[calc(100vh-32px)] sticky top-4 bg-white m-4 rounded-[32px] shadow-sm p-4">
       
       <div id="sidebar-logo" className="flex items-center gap-3 mb-10 px-4 pt-6">
         <div className="w-10 h-10 rounded-full border-[3px] border-[#FF8E29] flex items-center justify-center relative">
@@ -44,6 +47,8 @@ export default function Sidebar() {
         <h1 className="text-2xl font-bold text-gray-800 tracking-tight">Capella</h1>
       </div>
 
+      {/* Bagian menu ini punya 'overflow-y-auto', artinya kalau menunya kebanyakan, 
+          yang bisa di-scroll cuma bagian tengah ini aja, jadi tombol Logout di bawah aman! */}
       <div id="sidebar-menu" className="flex-1 overflow-y-auto px-2">
         <ul id="menu-list" className="space-y-2">
           <li><NavLink to="/" className={menuClass}><FaHome className="text-xl" /> <span>Dashboard</span></NavLink></li>
