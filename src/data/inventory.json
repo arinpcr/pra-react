@@ -7,7 +7,7 @@
     "brand": "Elegent Air",
     "price": 45,
     "stock": 15,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Bedside%20Table%20Bed%20with%20Cabinet/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1602928321679-560bb453f190?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "brand": "SoftTouch",
     "price": 120,
     "stock": 40,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/tops/Blue%20Frock/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "brand": "ZenBrew",
     "price": 12,
     "stock": 100,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Green%20Tea/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "brand": "CoolMaster",
     "price": 350,
     "stock": 25,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Boxed%20Blender/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "brand": "Arabica Gold",
     "price": 25,
     "stock": 80,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Watermelon/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "brand": "VisionPlus",
     "price": 600,
     "stock": 20,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/HP%20Pavilion%2015-DK1056WM/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "brand": "NatureScent",
     "price": 15,
     "stock": 50,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de%20Parfum/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1608528577891-eb055944f2e7?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "brand": "SoftTouch",
     "price": 8,
     "stock": 200,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/home-decoration/Plant%20Pot/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1584948338947-f4705592ec64?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "brand": "SoundWave",
     "price": 85,
     "stock": 35,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/smartphones/iPhone%20X/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "brand": "CocoaPure",
     "price": 5,
     "stock": 150,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1548907040-4baa42d10919?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "brand": "BoilExpert",
     "price": 30,
     "stock": 45,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Pan/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "brand": "DryFast",
     "price": 40,
     "stock": 30,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "brand": "GlowSkin",
     "price": 18,
     "stock": 60,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Skin%20Beauty%20Serum/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 14,
@@ -137,7 +137,7 @@
     "brand": "SoftTouch",
     "price": 15,
     "stock": 120,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/shoes/Nike%20Baseball%20Cleats/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 15,
@@ -147,7 +147,7 @@
     "brand": "AquaSpark",
     "price": 4,
     "stock": 90,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Juice/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1615486171448-4e782d61a293?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 16,
@@ -157,7 +157,7 @@
     "brand": "DreamCloud",
     "price": 55,
     "stock": 40,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1584100936595-c0654b355040?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 17,
@@ -167,7 +167,7 @@
     "brand": "SecureKey",
     "price": 150,
     "stock": 25,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Carbon%20Steel%20Wok/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 18,
@@ -177,7 +177,7 @@
     "brand": "NatureScent",
     "price": 22,
     "stock": 75,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 19,
@@ -187,7 +187,7 @@
     "brand": "PressGentle",
     "price": 65,
     "stock": 15,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 20,
@@ -197,7 +197,7 @@
     "brand": "CrunchTime",
     "price": 7,
     "stock": 110,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Strawberry/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1599598425947-330026296906?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 21,
@@ -207,7 +207,7 @@
     "brand": "FlexiBody",
     "price": 35,
     "stock": 10,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/sports-accessories/Tennis%20Racket/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1600618528240-fb9fc964b853?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 22,
@@ -217,7 +217,7 @@
     "brand": "ClayArt",
     "price": 45,
     "stock": 20,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Mug%20Tree%20Wood/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1594910086967-4d436a0fb0e3?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 23,
@@ -227,7 +227,7 @@
     "brand": "WriteElegent",
     "price": 12,
     "stock": 50,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/home-decoration/Family%20Tree%20Photo%20Frame/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1507981504996-015dc3df4bc5?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 24,
@@ -237,7 +237,7 @@
     "brand": "GlobalConnect",
     "price": 20,
     "stock": 100,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%207i%2014/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1558450125-1e3df6a165fc?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 25,
@@ -247,7 +247,7 @@
     "brand": "FreshFarm",
     "price": 30,
     "stock": 15,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Bananas/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 26,
@@ -257,7 +257,7 @@
     "brand": "DreamCloud",
     "price": 10,
     "stock": 80,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Bed/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 27,
@@ -267,7 +267,7 @@
     "brand": "LightFocus",
     "price": 25,
     "stock": 40,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/home-decoration/Decoration%20Wooden%20House/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 28,
@@ -277,7 +277,7 @@
     "brand": "DentClean",
     "price": 5,
     "stock": 200,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1606220588913-b3eea41b6351?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 29,
@@ -287,7 +287,7 @@
     "brand": "SoftTouch",
     "price": 12,
     "stock": 60,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/womens-dresses/Black%20Women's%20Gown/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1533256057999-082eb4126b77?auto=format&fit=crop&w=300&q=80"
   },
   {
     "id": 30,
@@ -297,6 +297,6 @@
     "brand": "DryWalk",
     "price": 18,
     "stock": 35,
-    "thumbnail": "https://cdn.dummyjson.com/products/images/sunglasses/Black%20Sun%20Glasses/thumbnail.png"
+    "thumbnail": "https://images.unsplash.com/photo-1554223086-455a297e2dbf?auto=format&fit=crop&w=300&q=80"
   }
 ]

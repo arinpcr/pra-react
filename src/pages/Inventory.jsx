@@ -70,13 +70,24 @@ export default function Inventory() {
                                 items.map((item) => (
                                     <tr key={item.id} className="hover:bg-orange-50/30 transition-colors group">
                                         <td className="p-6 font-bold text-gray-400">{item.code}</td>
-                                        <td className="p-6 font-extrabold text-gray-800">
-                                            {/* Link dinamis yang mengarah ke ID barang */}
-                                            <Link to={`/inventory/${item.id}`} className="hover:text-orange-500 transition-colors">
-                                                {item.title}
-                                            </Link>
-                                            <div className="text-xs text-gray-400 font-normal mt-1">{item.brand}</div>
+                                        
+                                        {/* BAGIAN YANG DIUBAH: Menambahkan flex dan tag img untuk thumbnail */}
+                                        <td className="p-6">
+                                            <div className="flex items-center gap-4">
+                                                <img 
+                                                    src={item.thumbnail} 
+                                                    alt={item.title} 
+                                                    className="w-12 h-12 rounded-xl object-cover shadow-sm border border-gray-100"
+                                                />
+                                                <div>
+                                                    <Link to={`/inventory/${item.id}`} className="font-extrabold text-gray-800 hover:text-orange-500 transition-colors block">
+                                                        {item.title}
+                                                    </Link>
+                                                    <div className="text-xs text-gray-400 font-normal mt-1">{item.brand}</div>
+                                                </div>
+                                            </div>
                                         </td>
+
                                         <td className="p-6 text-sm font-semibold text-gray-500 capitalize">
                                             {item.category}
                                         </td>
