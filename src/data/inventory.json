@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "title": "Aroma Diffuser Pro",
+    "code": "INV-001",
+    "category": "Amenities",
+    "brand": "Elegent Air",
+    "price": 45,
+    "stock": 15,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Mademoiselle%20Intense/thumbnail.png"
+  },
+  {
+    "id": 2,
+    "title": "Silk Bathrobe Luxury",
+    "code": "INV-002",
+    "category": "Apparel",
+    "brand": "SoftTouch",
+    "price": 120,
+    "stock": 40,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+  },
+  {
+    "id": 3,
+    "title": "Organic Green Tea",
+    "code": "INV-003",
+    "category": "Beverages",
+    "brand": "ZenBrew",
+    "price": 12,
+    "stock": 100,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Green%20Tea/thumbnail.png"
+  },
+  {
+    "id": 4,
+    "title": "Mini Fridge Elite",
+    "code": "INV-004",
+    "category": "Electronics",
+    "brand": "CoolMaster",
+    "price": 350,
+    "stock": 25,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Gray/thumbnail.png"
+  },
+  {
+    "id": 5,
+    "title": "Premium Coffee Beans",
+    "code": "INV-005",
+    "category": "Beverages",
+    "brand": "Arabica Gold",
+    "price": 25,
+    "stock": 80,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Honey%20Jar/thumbnail.png"
+  },
+  {
+    "id": 6,
+    "title": "Smart LED TV 50\"",
+    "code": "INV-006",
+    "category": "Electronics",
+    "brand": "VisionPlus",
+    "price": 600,
+    "stock": 20,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Microsoft%20Surface%20Laptop%204/thumbnail.png"
+  },
+  {
+    "id": 7,
+    "title": "Lavender Essential Oil",
+    "code": "INV-007",
+    "category": "Amenities",
+    "brand": "NatureScent",
+    "price": 15,
+    "stock": 50,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de%20Parfum/thumbnail.png"
+  },
+  {
+    "id": 8,
+    "title": "Cotton Hand Towel",
+    "code": "INV-008",
+    "category": "Amenities",
+    "brand": "SoftTouch",
+    "price": 8,
+    "stock": 200,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
+  },
+  {
+    "id": 9,
+    "title": "Bluetooth Room Speaker",
+    "code": "INV-009",
+    "category": "Electronics",
+    "brand": "SoundWave",
+    "price": 85,
+    "stock": 35,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Huawei%20MateBook%20X%20Pro/thumbnail.png"
+  },
+  {
+    "id": 10,
+    "title": "Dark Chocolate Bar",
+    "code": "INV-010",
+    "category": "Snacks",
+    "brand": "CocoaPure",
+    "price": 5,
+    "stock": 150,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png"
+  },
+  {
+    "id": 11,
+    "title": "Electric Kettle 1L",
+    "code": "INV-011",
+    "category": "Electronics",
+    "brand": "BoilExpert",
+    "price": 30,
+    "stock": 45,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Eggs/thumbnail.png"
+  },
+  {
+    "id": 12,
+    "title": "Hair Dryer 2000W",
+    "code": "INV-012",
+    "category": "Electronics",
+    "brand": "DryFast",
+    "price": 40,
+    "stock": 30,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png"
+  },
+  {
+    "id": 13,
+    "title": "Moisturizing Lotion",
+    "code": "INV-013",
+    "category": "Skincare",
+    "brand": "GlowSkin",
+    "price": 18,
+    "stock": 60,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
+  },
+  {
+    "id": 14,
+    "title": "Slippers Velvet",
+    "code": "INV-014",
+    "category": "Apparel",
+    "brand": "SoftTouch",
+    "price": 15,
+    "stock": 120,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Chicken%20Breast/thumbnail.png"
+  },
+  {
+    "id": 15,
+    "title": "Sparkling Water",
+    "code": "INV-015",
+    "category": "Beverages",
+    "brand": "AquaSpark",
+    "price": 4,
+    "stock": 90,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Kiwi/thumbnail.png"
+  },
+  {
+    "id": 16,
+    "title": "Memory Foam Pillow",
+    "code": "INV-016",
+    "category": "Amenities",
+    "brand": "DreamCloud",
+    "price": 55,
+    "stock": 40,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Milk/thumbnail.png"
+  },
+  {
+    "id": 17,
+    "title": "Digital Room Safe",
+    "code": "INV-017",
+    "category": "Electronics",
+    "brand": "SecureKey",
+    "price": 150,
+    "stock": 25,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/HP%20Victus%2015-fa0031nr/thumbnail.png"
+  },
+  {
+    "id": 18,
+    "title": "Luxury Soap Set",
+    "code": "INV-018",
+    "category": "Skincare",
+    "brand": "NatureScent",
+    "price": 22,
+    "stock": 75,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png"
+  },
+  {
+    "id": 19,
+    "title": "Iron & Ironing Board",
+    "code": "INV-019",
+    "category": "Electronics",
+    "brand": "PressGentle",
+    "price": 65,
+    "stock": 15,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Orange%20Juice/thumbnail.png"
+  },
+  {
+    "id": 20,
+    "title": "Mixed Nuts Canister",
+    "code": "INV-020",
+    "category": "Snacks",
+    "brand": "CrunchTime",
+    "price": 7,
+    "stock": 110,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Strawberry/thumbnail.png"
+  },
+  {
+    "id": 21,
+    "title": "Yoga Mat Premium",
+    "code": "INV-021",
+    "category": "Sports",
+    "brand": "FlexiBody",
+    "price": 35,
+    "stock": 10,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Potato/thumbnail.png"
+  },
+  {
+    "id": 22,
+    "title": "Ceramic Tea Set",
+    "code": "INV-022",
+    "category": "Amenities",
+    "brand": "ClayArt",
+    "price": 45,
+    "stock": 20,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Mulab%20Vitamin%20C%20Serum/thumbnail.png"
+  },
+  {
+    "id": 23,
+    "title": "Stationery Kit",
+    "code": "INV-023",
+    "category": "Office",
+    "brand": "WriteElegent",
+    "price": 12,
+    "stock": 50,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Beef%20Steak/thumbnail.png"
+  },
+  {
+    "id": 24,
+    "title": "Universal Travel Adapter",
+    "code": "INV-024",
+    "category": "Electronics",
+    "brand": "GlobalConnect",
+    "price": 20,
+    "stock": 100,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Lenovo%20Yoga%207i%2014/thumbnail.png"
+  },
+  {
+    "id": 25,
+    "title": "Fruit Basket",
+    "code": "INV-025",
+    "category": "Snacks",
+    "brand": "FreshFarm",
+    "price": 30,
+    "stock": 15,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Bananas/thumbnail.png"
+  },
+  {
+    "id": 26,
+    "title": "Plush Pillow Case",
+    "code": "INV-026",
+    "category": "Amenities",
+    "brand": "DreamCloud",
+    "price": 10,
+    "stock": 80,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cat%20Food/thumbnail.png"
+  },
+  {
+    "id": 27,
+    "title": "Reading Lamp LED",
+    "code": "INV-027",
+    "category": "Electronics",
+    "brand": "LightFocus",
+    "price": 25,
+    "stock": 40,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Cooking%20Oil/thumbnail.png"
+  },
+  {
+    "id": 28,
+    "title": "Premium Toothbrush",
+    "code": "INV-028",
+    "category": "Skincare",
+    "brand": "DentClean",
+    "price": 5,
+    "stock": 200,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Dog%20Food/thumbnail.png"
+  },
+  {
+    "id": 29,
+    "title": "Silk Sleep Mask",
+    "code": "INV-029",
+    "category": "Apparel",
+    "brand": "SoftTouch",
+    "price": 12,
+    "stock": 60,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Fish%20Steak/thumbnail.png"
+  },
+  {
+    "id": 30,
+    "title": "Umbrella Elegent",
+    "code": "INV-030",
+    "category": "Amenities",
+    "brand": "DryWalk",
+    "price": 18,
+    "stock": 35,
+    "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Rice/thumbnail.png"
+  }
+]

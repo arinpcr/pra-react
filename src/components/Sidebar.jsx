@@ -1,4 +1,4 @@
-import { FaHome, FaBed, FaUserFriends, FaSignOutAlt, FaSignInAlt, FaBan } from "react-icons/fa";
+import { FaHome, FaBed, FaUserFriends, FaSignOutAlt, FaSignInAlt, FaBan, FaBox } from "react-icons/fa";
 // NavLink mirip dengan Link, namun NavLink memiliki prop 'isActive'.
 // Prop ini tahu apakah rute/URL yang tertulis pada atribut 'to' sama dengan URL yang sedang dikunjungi user.
 import { NavLink, useNavigate } from "react-router-dom";
@@ -49,6 +49,9 @@ export default function Sidebar() {
           <li><NavLink to="/" className={menuClass}><FaHome className="text-xl" /> <span>Dashboard</span></NavLink></li>
           <li><NavLink to="/bookings" className={menuClass}><FaBed className="text-xl" /> <span>Bookings</span></NavLink></li>
           <li><NavLink to="/guests" className={menuClass}><FaUserFriends className="text-xl" /> <span>Guests</span></NavLink></li>
+          
+          {/* TAMBAHAN BARU: Menu Inventory ditambahkan di sini */}
+          <li><NavLink to="/inventory" className={menuClass}><FaBox className="text-xl" /> <span>Inventory</span></NavLink></li>
           
           <li className="mt-8 pt-6 border-t border-gray-100">
             <span className="px-4 text-[11px] font-bold text-gray-400 uppercase tracking-widest">Error Pages</span>
